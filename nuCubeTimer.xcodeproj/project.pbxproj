@@ -1,0 +1,296 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EEA0F9D21527103C00630ACC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA0F9D11527103C00630ACC /* UIKit.framework */; };
+		EEA0F9D41527103C00630ACC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA0F9D31527103C00630ACC /* Foundation.framework */; };
+		EEA0F9D61527103C00630ACC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA0F9D51527103C00630ACC /* CoreGraphics.framework */; };
+		EEA0F9DC1527103C00630ACC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EEA0F9DA1527103C00630ACC /* InfoPlist.strings */; };
+		EEA0F9DE1527103C00630ACC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EEA0F9DD1527103C00630ACC /* main.m */; };
+		EEA0F9E21527103C00630ACC /* nuCubeTimerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EEA0F9E11527103C00630ACC /* nuCubeTimerAppDelegate.m */; };
+		EEA0F9E51527103C00630ACC /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEA0F9E31527103C00630ACC /* MainStoryboard_iPhone.storyboard */; };
+		EEA0F9E81527103C00630ACC /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEA0F9E61527103C00630ACC /* MainStoryboard_iPad.storyboard */; };
+		EEA0F9EB1527103C00630ACC /* nuCubeTimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEA0F9EA1527103C00630ACC /* nuCubeTimerViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EEA0F9CD1527103C00630ACC /* nuCubeTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nuCubeTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEA0F9D11527103C00630ACC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		EEA0F9D31527103C00630ACC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		EEA0F9D51527103C00630ACC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		EEA0F9D91527103C00630ACC /* nuCubeTimer-Info.plist */ = {isa = PBXFileReference; path = "nuCubeTimer-Info.plist"; sourceTree = "<group>"; };
+		EEA0F9DB1527103C00630ACC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EEA0F9DD1527103C00630ACC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EEA0F9DF1527103C00630ACC /* nuCubeTimer-Prefix.pch */ = {isa = PBXFileReference; path = "nuCubeTimer-Prefix.pch"; sourceTree = "<group>"; };
+		EEA0F9E01527103C00630ACC /* nuCubeTimerAppDelegate.h */ = {isa = PBXFileReference; path = nuCubeTimerAppDelegate.h; sourceTree = "<group>"; };
+		EEA0F9E11527103C00630ACC /* nuCubeTimerAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = nuCubeTimerAppDelegate.m; sourceTree = "<group>"; };
+		EEA0F9E41527103C00630ACC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		EEA0F9E71527103C00630ACC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		EEA0F9E91527103C00630ACC /* nuCubeTimerViewController.h */ = {isa = PBXFileReference; path = nuCubeTimerViewController.h; sourceTree = "<group>"; };
+		EEA0F9EA1527103C00630ACC /* nuCubeTimerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = nuCubeTimerViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EEA0F9CA1527103C00630ACC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEA0F9D21527103C00630ACC /* UIKit.framework in Frameworks */,
+				EEA0F9D41527103C00630ACC /* Foundation.framework in Frameworks */,
+				EEA0F9D61527103C00630ACC /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EEA0F9C21527103C00630ACC = {
+			isa = PBXGroup;
+			children = (
+				EEA0F9D71527103C00630ACC /* nuCubeTimer */,
+				EEA0F9D01527103C00630ACC /* Frameworks */,
+				EEA0F9CE1527103C00630ACC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EEA0F9CE1527103C00630ACC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EEA0F9CD1527103C00630ACC /* nuCubeTimer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EEA0F9D01527103C00630ACC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EEA0F9D11527103C00630ACC /* UIKit.framework */,
+				EEA0F9D31527103C00630ACC /* Foundation.framework */,
+				EEA0F9D51527103C00630ACC /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EEA0F9D71527103C00630ACC /* nuCubeTimer */ = {
+			isa = PBXGroup;
+			children = (
+				EEA0F9E01527103C00630ACC /* nuCubeTimerAppDelegate.h */,
+				EEA0F9E11527103C00630ACC /* nuCubeTimerAppDelegate.m */,
+				EEA0F9E31527103C00630ACC /* MainStoryboard_iPhone.storyboard */,
+				EEA0F9E61527103C00630ACC /* MainStoryboard_iPad.storyboard */,
+				EEA0F9E91527103C00630ACC /* nuCubeTimerViewController.h */,
+				EEA0F9EA1527103C00630ACC /* nuCubeTimerViewController.m */,
+				EEA0F9D81527103C00630ACC /* Supporting Files */,
+			);
+			path = nuCubeTimer;
+			sourceTree = "<group>";
+		};
+		EEA0F9D81527103C00630ACC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EEA0F9D91527103C00630ACC /* nuCubeTimer-Info.plist */,
+				EEA0F9DA1527103C00630ACC /* InfoPlist.strings */,
+				EEA0F9DD1527103C00630ACC /* main.m */,
+				EEA0F9DF1527103C00630ACC /* nuCubeTimer-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EEA0F9CC1527103C00630ACC /* nuCubeTimer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EEA0F9EE1527103C00630ACC /* Build configuration list for PBXNativeTarget "nuCubeTimer" */;
+			buildPhases = (
+				EEA0F9C91527103C00630ACC /* Sources */,
+				EEA0F9CA1527103C00630ACC /* Frameworks */,
+				EEA0F9CB1527103C00630ACC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = nuCubeTimer;
+			productName = nuCubeTimer;
+			productReference = EEA0F9CD1527103C00630ACC /* nuCubeTimer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EEA0F9C41527103C00630ACC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = nuCubeTimer;
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = EEA0F9C71527103C00630ACC /* Build configuration list for PBXProject "nuCubeTimer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = EEA0F9C21527103C00630ACC;
+			productRefGroup = EEA0F9CE1527103C00630ACC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EEA0F9CC1527103C00630ACC /* nuCubeTimer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EEA0F9CB1527103C00630ACC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEA0F9DC1527103C00630ACC /* InfoPlist.strings in Resources */,
+				EEA0F9E51527103C00630ACC /* MainStoryboard_iPhone.storyboard in Resources */,
+				EEA0F9E81527103C00630ACC /* MainStoryboard_iPad.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EEA0F9C91527103C00630ACC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEA0F9DE1527103C00630ACC /* main.m in Sources */,
+				EEA0F9E21527103C00630ACC /* nuCubeTimerAppDelegate.m in Sources */,
+				EEA0F9EB1527103C00630ACC /* nuCubeTimerViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EEA0F9DA1527103C00630ACC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EEA0F9DB1527103C00630ACC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		EEA0F9E31527103C00630ACC /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EEA0F9E41527103C00630ACC /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		EEA0F9E61527103C00630ACC /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EEA0F9E71527103C00630ACC /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EEA0F9EC1527103C00630ACC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EEA0F9ED1527103C00630ACC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EEA0F9EF1527103C00630ACC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "nuCubeTimer/nuCubeTimer-Prefix.pch";
+				INFOPLIST_FILE = "nuCubeTimer/nuCubeTimer-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		EEA0F9F01527103C00630ACC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "nuCubeTimer/nuCubeTimer-Prefix.pch";
+				INFOPLIST_FILE = "nuCubeTimer/nuCubeTimer-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EEA0F9C71527103C00630ACC /* Build configuration list for PBXProject "nuCubeTimer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EEA0F9EC1527103C00630ACC /* Debug */,
+				EEA0F9ED1527103C00630ACC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EEA0F9EE1527103C00630ACC /* Build configuration list for PBXNativeTarget "nuCubeTimer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EEA0F9EF1527103C00630ACC /* Debug */,
+				EEA0F9F01527103C00630ACC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EEA0F9C41527103C00630ACC /* Project object */;
+}
