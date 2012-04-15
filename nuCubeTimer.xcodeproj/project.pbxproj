@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE9CE5E11528081C00D8BACE /* chinaz1.png in Resources */ = {isa = PBXBuildFile; fileRef = EE9CE5E01528081C00D8BACE /* chinaz1.png */; };
+		EE9CE5E31528082800D8BACE /* chinaz1.png in Resources */ = {isa = PBXBuildFile; fileRef = EE9CE5E21528082800D8BACE /* chinaz1.png */; };
+		EE9CE5E51528087800D8BACE /* chinaz2.png in Resources */ = {isa = PBXBuildFile; fileRef = EE9CE5E41528087800D8BACE /* chinaz2.png */; };
 		EEA0F9D21527103C00630ACC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA0F9D11527103C00630ACC /* UIKit.framework */; };
 		EEA0F9D41527103C00630ACC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA0F9D31527103C00630ACC /* Foundation.framework */; };
 		EEA0F9D61527103C00630ACC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA0F9D51527103C00630ACC /* CoreGraphics.framework */; };
@@ -16,23 +19,28 @@
 		EEA0F9E51527103C00630ACC /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEA0F9E31527103C00630ACC /* MainStoryboard_iPhone.storyboard */; };
 		EEA0F9E81527103C00630ACC /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEA0F9E61527103C00630ACC /* MainStoryboard_iPad.storyboard */; };
 		EEA0F9EB1527103C00630ACC /* nuCubeTimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEA0F9EA1527103C00630ACC /* nuCubeTimerViewController.m */; };
+		EEBB04B21531B66600477C97 /* CubeTime.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EEBB04B01531B66600477C97 /* CubeTime.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EE9CE5E01528081C00D8BACE /* chinaz1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chinaz1.png; sourceTree = "<group>"; };
+		EE9CE5E21528082800D8BACE /* chinaz1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = chinaz1.png; path = ../chinaz1.png; sourceTree = "<group>"; };
+		EE9CE5E41528087800D8BACE /* chinaz2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = chinaz2.png; path = ../chinaz2.png; sourceTree = "<group>"; };
 		EEA0F9CD1527103C00630ACC /* nuCubeTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nuCubeTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEA0F9D11527103C00630ACC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		EEA0F9D31527103C00630ACC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EEA0F9D51527103C00630ACC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		EEA0F9D91527103C00630ACC /* nuCubeTimer-Info.plist */ = {isa = PBXFileReference; path = "nuCubeTimer-Info.plist"; sourceTree = "<group>"; };
+		EEA0F9D91527103C00630ACC /* nuCubeTimer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "nuCubeTimer-Info.plist"; sourceTree = "<group>"; };
 		EEA0F9DB1527103C00630ACC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		EEA0F9DD1527103C00630ACC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		EEA0F9DF1527103C00630ACC /* nuCubeTimer-Prefix.pch */ = {isa = PBXFileReference; path = "nuCubeTimer-Prefix.pch"; sourceTree = "<group>"; };
-		EEA0F9E01527103C00630ACC /* nuCubeTimerAppDelegate.h */ = {isa = PBXFileReference; path = nuCubeTimerAppDelegate.h; sourceTree = "<group>"; };
-		EEA0F9E11527103C00630ACC /* nuCubeTimerAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = nuCubeTimerAppDelegate.m; sourceTree = "<group>"; };
+		EEA0F9DD1527103C00630ACC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = main.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		EEA0F9DF1527103C00630ACC /* nuCubeTimer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "nuCubeTimer-Prefix.pch"; sourceTree = "<group>"; };
+		EEA0F9E01527103C00630ACC /* nuCubeTimerAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = nuCubeTimerAppDelegate.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		EEA0F9E11527103C00630ACC /* nuCubeTimerAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = nuCubeTimerAppDelegate.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		EEA0F9E41527103C00630ACC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		EEA0F9E71527103C00630ACC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		EEA0F9E91527103C00630ACC /* nuCubeTimerViewController.h */ = {isa = PBXFileReference; path = nuCubeTimerViewController.h; sourceTree = "<group>"; };
-		EEA0F9EA1527103C00630ACC /* nuCubeTimerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = nuCubeTimerViewController.m; sourceTree = "<group>"; };
+		EEA0F9E91527103C00630ACC /* nuCubeTimerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = nuCubeTimerViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		EEA0F9EA1527103C00630ACC /* nuCubeTimerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = nuCubeTimerViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		EEBB04B11531B66600477C97 /* CubeTime.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CubeTime.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +60,7 @@
 		EEA0F9C21527103C00630ACC = {
 			isa = PBXGroup;
 			children = (
+				EEBB04B01531B66600477C97 /* CubeTime.xcdatamodeld */,
 				EEA0F9D71527103C00630ACC /* nuCubeTimer */,
 				EEA0F9D01527103C00630ACC /* Frameworks */,
 				EEA0F9CE1527103C00630ACC /* Products */,
@@ -79,12 +88,15 @@
 		EEA0F9D71527103C00630ACC /* nuCubeTimer */ = {
 			isa = PBXGroup;
 			children = (
+				EE9CE5E41528087800D8BACE /* chinaz2.png */,
+				EE9CE5E21528082800D8BACE /* chinaz1.png */,
 				EEA0F9E01527103C00630ACC /* nuCubeTimerAppDelegate.h */,
 				EEA0F9E11527103C00630ACC /* nuCubeTimerAppDelegate.m */,
 				EEA0F9E31527103C00630ACC /* MainStoryboard_iPhone.storyboard */,
 				EEA0F9E61527103C00630ACC /* MainStoryboard_iPad.storyboard */,
 				EEA0F9E91527103C00630ACC /* nuCubeTimerViewController.h */,
 				EEA0F9EA1527103C00630ACC /* nuCubeTimerViewController.m */,
+				EE9CE5E01528081C00D8BACE /* chinaz1.png */,
 				EEA0F9D81527103C00630ACC /* Supporting Files */,
 			);
 			path = nuCubeTimer;
@@ -155,6 +167,9 @@
 				EEA0F9DC1527103C00630ACC /* InfoPlist.strings in Resources */,
 				EEA0F9E51527103C00630ACC /* MainStoryboard_iPhone.storyboard in Resources */,
 				EEA0F9E81527103C00630ACC /* MainStoryboard_iPad.storyboard in Resources */,
+				EE9CE5E11528081C00D8BACE /* chinaz1.png in Resources */,
+				EE9CE5E31528082800D8BACE /* chinaz1.png in Resources */,
+				EE9CE5E51528087800D8BACE /* chinaz2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,6 +183,7 @@
 				EEA0F9DE1527103C00630ACC /* main.m in Sources */,
 				EEA0F9E21527103C00630ACC /* nuCubeTimerAppDelegate.m in Sources */,
 				EEA0F9EB1527103C00630ACC /* nuCubeTimerViewController.m in Sources */,
+				EEBB04B21531B66600477C97 /* CubeTime.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,8 +305,22 @@
 				EEA0F9F01527103C00630ACC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EEBB04B01531B66600477C97 /* CubeTime.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EEBB04B11531B66600477C97 /* CubeTime.xcdatamodel */,
+			);
+			currentVersion = EEBB04B11531B66600477C97 /* CubeTime.xcdatamodel */;
+			path = CubeTime.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = EEA0F9C41527103C00630ACC /* Project object */;
 }
