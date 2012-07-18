@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface nuCubeTimerViewController : UIViewController
+#import "CoreDataTableViewController.h"
+@interface nuCubeTimerViewController : CoreDataTableViewController
+@property (nonatomic, strong) UIManagedDocument *recordDataBase;
 @end

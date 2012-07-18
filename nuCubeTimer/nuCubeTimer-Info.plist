@@ -13,10 +13,7 @@
 		<key>CFBundlePrimaryIcon</key>
 		<dict>
 			<key>CFBundleIconFiles</key>
-			<array>
-				<string>chinaz1.png</string>
-				<string>chinaz2.png</string>
-			</array>
+			<array/>
 		</dict>
 	</dict>
 	<key>CFBundleIdentifier</key>

@@ -1,0 +1,852 @@
+diff --git a/CubeTime.xcdatamodeld/.xccurrentversion b/CubeTime.xcdatamodeld/.xccurrentversion
+deleted file mode 100644
+index 99096a7..0000000
+--- a/CubeTime.xcdatamodeld/.xccurrentversion
++++ /dev/null
+@@ -1,8 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+-<plist version="1.0">
+-<dict>
+-	<key>_XCCurrentVersionName</key>
+-	<string>CubeTime.xcdatamodel</string>
+-</dict>
+-</plist>
+diff --git a/CubeTime.xcdatamodeld/CubeTime.xcdatamodel/contents b/CubeTime.xcdatamodeld/CubeTime.xcdatamodel/contents
+deleted file mode 100644
+index 3751452..0000000
+--- a/CubeTime.xcdatamodeld/CubeTime.xcdatamodel/contents
++++ /dev/null
+@@ -1,16 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+-<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1170" systemVersion="11D50b" minimumToolsVersion="Xcode 4.1" macOSVersion="Automatic" iOSVersion="Automatic">
+-    <entity name="Cuber" representedClassName="Cuber" syncable="YES">
+-        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+-        <relationship name="timeRecords" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CubeTimeRecord" inverseName="whoCreate" inverseEntity="CubeTimeRecord" syncable="YES"/>
+-    </entity>
+-    <entity name="CubeTimeRecord" syncable="YES">
+-        <attribute name="time" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+-        <attribute name="video" optional="YES" attributeType="Binary" syncable="YES"/>
+-        <relationship name="whoCreate" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Cuber" inverseName="timeRecords" inverseEntity="Cuber" syncable="YES"/>
+-    </entity>
+-    <elements>
+-        <element name="Cuber" positionX="160" positionY="192" width="128" height="75"/>
+-        <element name="CubeTimeRecord" positionX="414" positionY="252" width="128" height="90"/>
+-    </elements>
+-</model>
+\ No newline at end of file
+diff --git a/TimeRecord.xcdatamodeld/.xccurrentversion b/TimeRecord.xcdatamodeld/.xccurrentversion
+deleted file mode 100644
+index 0c67376..0000000
+--- a/TimeRecord.xcdatamodeld/.xccurrentversion
++++ /dev/null
+@@ -1,5 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+-<plist version="1.0">
+-<dict/>
+-</plist>
+diff --git a/nuCubeTimer.xcodeproj/project.pbxproj b/nuCubeTimer.xcodeproj/project.pbxproj
+index 9709ed4..29ccef1 100644
+--- a/nuCubeTimer.xcodeproj/project.pbxproj
++++ b/nuCubeTimer.xcodeproj/project.pbxproj
+@@ -19,7 +19,6 @@
+ 		EEA0F9E51527103C00630ACC /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEA0F9E31527103C00630ACC /* MainStoryboard_iPhone.storyboard */; };
+ 		EEA0F9E81527103C00630ACC /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEA0F9E61527103C00630ACC /* MainStoryboard_iPad.storyboard */; };
+ 		EEA0F9EB1527103C00630ACC /* nuCubeTimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEA0F9EA1527103C00630ACC /* nuCubeTimerViewController.m */; };
+-		EEBB04B21531B66600477C97 /* CubeTime.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EEBB04B01531B66600477C97 /* CubeTime.xcdatamodeld */; };
+ /* End PBXBuildFile section */
+ 
+ /* Begin PBXFileReference section */
+@@ -40,7 +39,6 @@
+ 		EEA0F9E71527103C00630ACC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+ 		EEA0F9E91527103C00630ACC /* nuCubeTimerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = nuCubeTimerViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+ 		EEA0F9EA1527103C00630ACC /* nuCubeTimerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = nuCubeTimerViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+-		EEBB04B11531B66600477C97 /* CubeTime.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CubeTime.xcdatamodel; sourceTree = "<group>"; };
+ /* End PBXFileReference section */
+ 
+ /* Begin PBXFrameworksBuildPhase section */
+@@ -60,7 +58,6 @@
+ 		EEA0F9C21527103C00630ACC = {
+ 			isa = PBXGroup;
+ 			children = (
+-				EEBB04B01531B66600477C97 /* CubeTime.xcdatamodeld */,
+ 				EEA0F9D71527103C00630ACC /* nuCubeTimer */,
+ 				EEA0F9D01527103C00630ACC /* Frameworks */,
+ 				EEA0F9CE1527103C00630ACC /* Products */,
+@@ -183,7 +180,6 @@
+ 				EEA0F9DE1527103C00630ACC /* main.m in Sources */,
+ 				EEA0F9E21527103C00630ACC /* nuCubeTimerAppDelegate.m in Sources */,
+ 				EEA0F9EB1527103C00630ACC /* nuCubeTimerViewController.m in Sources */,
+-				EEBB04B21531B66600477C97 /* CubeTime.xcdatamodeld in Sources */,
+ 			);
+ 			runOnlyForDeploymentPostprocessing = 0;
+ 		};
+@@ -308,19 +304,6 @@
+ 			defaultConfigurationName = Release;
+ 		};
+ /* End XCConfigurationList section */
+-
+-/* Begin XCVersionGroup section */
+-		EEBB04B01531B66600477C97 /* CubeTime.xcdatamodeld */ = {
+-			isa = XCVersionGroup;
+-			children = (
+-				EEBB04B11531B66600477C97 /* CubeTime.xcdatamodel */,
+-			);
+-			currentVersion = EEBB04B11531B66600477C97 /* CubeTime.xcdatamodel */;
+-			path = CubeTime.xcdatamodeld;
+-			sourceTree = "<group>";
+-			versionGroupType = wrapper.xcdatamodel;
+-		};
+-/* End XCVersionGroup section */
+ 	};
+ 	rootObject = EEA0F9C41527103C00630ACC /* Project object */;
+ }
+diff --git a/nuCubeTimer.xcodeproj/project.xcworkspace/contents.xcworkspacedata b/nuCubeTimer.xcodeproj/project.xcworkspace/contents.xcworkspacedata
+new file mode 100644
+index 0000000..bb253bf
+--- /dev/null
++++ b/nuCubeTimer.xcodeproj/project.xcworkspace/contents.xcworkspacedata
+@@ -0,0 +1,7 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<Workspace
++   version = "1.0">
++   <FileRef
++      location = "self:nuCubeTimer.xcodeproj">
++   </FileRef>
++</Workspace>
+diff --git a/nuCubeTimer.xcodeproj/project.xcworkspace/xcuserdata/mint924.xcuserdatad/UserInterfaceState.xcuserstate b/nuCubeTimer.xcodeproj/project.xcworkspace/xcuserdata/mint924.xcuserdatad/UserInterfaceState.xcuserstate
+new file mode 100644
+index 0000000..61b5078
+Binary files /dev/null and b/nuCubeTimer.xcodeproj/project.xcworkspace/xcuserdata/mint924.xcuserdatad/UserInterfaceState.xcuserstate differ
+diff --git a/nuCubeTimer.xcodeproj/xcuserdata/mint924.xcuserdatad/xcschemes/nuCubeTimer.xcscheme b/nuCubeTimer.xcodeproj/xcuserdata/mint924.xcuserdatad/xcschemes/nuCubeTimer.xcscheme
+new file mode 100644
+index 0000000..ad8fdf8
+--- /dev/null
++++ b/nuCubeTimer.xcodeproj/xcuserdata/mint924.xcuserdatad/xcschemes/nuCubeTimer.xcscheme
+@@ -0,0 +1,85 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<Scheme
++   version = "1.3">
++   <BuildAction
++      parallelizeBuildables = "YES"
++      buildImplicitDependencies = "YES">
++      <BuildActionEntries>
++         <BuildActionEntry
++            buildForTesting = "YES"
++            buildForRunning = "YES"
++            buildForProfiling = "YES"
++            buildForArchiving = "YES"
++            buildForAnalyzing = "YES">
++            <BuildableReference
++               BuildableIdentifier = "primary"
++               BlueprintIdentifier = "EEA0F9CC1527103C00630ACC"
++               BuildableName = "nuCubeTimer.app"
++               BlueprintName = "nuCubeTimer"
++               ReferencedContainer = "container:nuCubeTimer.xcodeproj">
++            </BuildableReference>
++         </BuildActionEntry>
++      </BuildActionEntries>
++   </BuildAction>
++   <TestAction
++      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
++      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
++      shouldUseLaunchSchemeArgsEnv = "YES"
++      buildConfiguration = "Debug">
++      <Testables>
++      </Testables>
++      <MacroExpansion>
++         <BuildableReference
++            BuildableIdentifier = "primary"
++            BlueprintIdentifier = "EEA0F9CC1527103C00630ACC"
++            BuildableName = "nuCubeTimer.app"
++            BlueprintName = "nuCubeTimer"
++            ReferencedContainer = "container:nuCubeTimer.xcodeproj">
++         </BuildableReference>
++      </MacroExpansion>
++   </TestAction>
++   <LaunchAction
++      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
++      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
++      launchStyle = "0"
++      useCustomWorkingDirectory = "NO"
++      buildConfiguration = "Debug"
++      ignoresPersistentStateOnLaunch = "NO"
++      debugDocumentVersioning = "YES"
++      allowLocationSimulation = "YES">
++      <BuildableProductRunnable>
++         <BuildableReference
++            BuildableIdentifier = "primary"
++            BlueprintIdentifier = "EEA0F9CC1527103C00630ACC"
++            BuildableName = "nuCubeTimer.app"
++            BlueprintName = "nuCubeTimer"
++            ReferencedContainer = "container:nuCubeTimer.xcodeproj">
++         </BuildableReference>
++      </BuildableProductRunnable>
++      <AdditionalOptions>
++      </AdditionalOptions>
++   </LaunchAction>
++   <ProfileAction
++      shouldUseLaunchSchemeArgsEnv = "YES"
++      savedToolIdentifier = ""
++      useCustomWorkingDirectory = "NO"
++      buildConfiguration = "Release"
++      debugDocumentVersioning = "YES">
++      <BuildableProductRunnable>
++         <BuildableReference
++            BuildableIdentifier = "primary"
++            BlueprintIdentifier = "EEA0F9CC1527103C00630ACC"
++            BuildableName = "nuCubeTimer.app"
++            BlueprintName = "nuCubeTimer"
++            ReferencedContainer = "container:nuCubeTimer.xcodeproj">
++         </BuildableReference>
++      </BuildableProductRunnable>
++   </ProfileAction>
++   <AnalyzeAction
++      buildConfiguration = "Debug">
++   </AnalyzeAction>
++   <ArchiveAction
++      buildConfiguration = "Release"
++      revealArchiveInOrganizer = "YES">
++   </ArchiveAction>
++</Scheme>
+diff --git a/nuCubeTimer.xcodeproj/xcuserdata/mint924.xcuserdatad/xcschemes/xcschememanagement.plist b/nuCubeTimer.xcodeproj/xcuserdata/mint924.xcuserdatad/xcschemes/xcschememanagement.plist
+new file mode 100644
+index 0000000..6e9a38f
+--- /dev/null
++++ b/nuCubeTimer.xcodeproj/xcuserdata/mint924.xcuserdatad/xcschemes/xcschememanagement.plist
+@@ -0,0 +1,22 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
++<plist version="1.0">
++<dict>
++	<key>SchemeUserState</key>
++	<dict>
++		<key>nuCubeTimer.xcscheme</key>
++		<dict>
++			<key>orderHint</key>
++			<integer>0</integer>
++		</dict>
++	</dict>
++	<key>SuppressBuildableAutocreation</key>
++	<dict>
++		<key>EEA0F9CC1527103C00630ACC</key>
++		<dict>
++			<key>primary</key>
++			<true/>
++		</dict>
++	</dict>
++</dict>
++</plist>
+diff --git a/nuCubeTimer/CoreDataTableViewController.h b/nuCubeTimer/CoreDataTableViewController.h
+new file mode 100755
+index 0000000..4de8d04
+--- /dev/null
++++ b/nuCubeTimer/CoreDataTableViewController.h
+@@ -0,0 +1,50 @@
++//
++//  CoreDataTableViewController.h
++//
++//  Created for Stanford CS193p Spring 2010
++//
++
++#import <UIKit/UIKit.h>
++#import <CoreData/CoreData.h>
++
++@interface CoreDataTableViewController : UITableViewController <NSFetchedResultsControllerDelegate, UISearchDisplayDelegate>
++{
++	NSPredicate *normalPredicate;
++	NSString *currentSearchText;
++	NSString *titleKey;
++	NSString *subtitleKey;
++	NSString *searchKey;
++	NSFetchedResultsController *fetchedResultsController;
++}
++
++// the controller (this class does nothing if this is not set)
++@property (retain) NSFetchedResultsController *fetchedResultsController;
++
++// key to use when displaying items in the table; defaults to the first sortDescriptor's key
++@property (copy) NSString *titleKey;
++// key to use when displaying items in the table for the subtitle; defaults to nil
++@property (copy) NSString *subtitleKey;
++// key to use when searching the table (should usually be the same as displayKey); if nil, no searching allowed
++@property (copy) NSString *searchKey;
++
++// gets accessory type (e.g. disclosure indicator) for the given managedObject (default DisclosureIndicator)
++- (UITableViewCellAccessoryType)accessoryTypeForManagedObject:(NSManagedObject *)managedObject;
++
++// returns an image (small size) to display in the cell (default is nil)
++- (UIImage *)thumbnailImageForManagedObject:(NSManagedObject *)managedObject;
++
++// this is the CoreDataTableViewController's version of tableView:cellForRowAtIndexPath:
++- (UITableViewCell *)tableView:(UITableView *)tableView cellForManagedObject:(NSManagedObject *)managedObject;
++
++// called when a cell representing the specified managedObject is selected (does nothing by default)
++- (void)managedObjectSelected:(NSManagedObject *)managedObject;
++
++// called to see if the specified managed object is allowed to be deleted (default is NO)
++- (BOOL)canDeleteManagedObject:(NSManagedObject *)managedObject;
++
++// called when the user commits a delete by hitting a Delete button in the user-interface (default is to do nothing)
++// this method does not necessarily have to delete the object from the database
++// (e.g. it might just change the object so that it does not match the fetched results controller's predicate anymore)
++- (void)deleteManagedObject:(NSManagedObject *)managedObject;
++
++@end
+diff --git a/nuCubeTimer/CoreDataTableViewController.m b/nuCubeTimer/CoreDataTableViewController.m
+new file mode 100755
+index 0000000..073cc8c
+--- /dev/null
++++ b/nuCubeTimer/CoreDataTableViewController.m
+@@ -0,0 +1,289 @@
++//
++//  CoreDataTableViewController.m
++//
++//  Created for Stanford CS193p Spring 2010
++//
++
++#import "CoreDataTableViewController.h"
++
++@implementation CoreDataTableViewController
++
++@synthesize fetchedResultsController;
++@synthesize titleKey, subtitleKey, searchKey;
++
++- (void)createSearchBar
++{
++	if (self.searchKey.length) {
++		if (self.tableView && !self.tableView.tableHeaderView) {
++			UISearchBar *searchBar = [[[UISearchBar alloc] init] autorelease];
++			[[UISearchDisplayController alloc] initWithSearchBar:searchBar contentsController:self];
++			self.searchDisplayController.searchResultsDelegate = self;
++			self.searchDisplayController.searchResultsDataSource = self;
++			self.searchDisplayController.delegate = self;
++			searchBar.frame = CGRectMake(0, 0, 0, 38);
++			self.tableView.tableHeaderView = searchBar;
++		}
++	} else {
++		self.tableView.tableHeaderView = nil;
++	}
++}
++
++- (void)setSearchKey:(NSString *)aKey
++{
++	[searchKey release];
++	searchKey = [aKey copy];
++	[self createSearchBar];
++}
++
++- (NSString *)titleKey
++{
++	if (!titleKey) {
++		NSArray *sortDescriptors = [self.fetchedResultsController.fetchRequest sortDescriptors];
++		if (sortDescriptors.count) {
++			return [[sortDescriptors objectAtIndex:0] key];
++		} else {
++			return nil;
++		}
++	} else {
++		return titleKey;
++	}
++}
++
++- (void)performFetchForTableView:(UITableView *)tableView
++{
++	NSError *error = nil;
++	[self.fetchedResultsController performFetch:&error];
++	if (error) {
++		NSLog(@"[CoreDataTableViewController performFetchForTableView:] %@ (%@)", [error localizedDescription], [error localizedFailureReason]);
++	}
++	[tableView reloadData];
++}
++
++- (NSFetchedResultsController *)fetchedResultsControllerForTableView:(UITableView *)tableView
++{
++	if (tableView == self.tableView) {
++		if (self.fetchedResultsController.fetchRequest.predicate != normalPredicate) {
++			[NSFetchedResultsController deleteCacheWithName:self.fetchedResultsController.cacheName];
++			self.fetchedResultsController.fetchRequest.predicate = normalPredicate;
++			[self performFetchForTableView:tableView];
++		}
++		[currentSearchText release];
++		currentSearchText = nil;
++	} else if ((tableView == self.searchDisplayController.searchResultsTableView) && self.searchKey && ![currentSearchText isEqual:self.searchDisplayController.searchBar.text]) {
++		[currentSearchText release];
++		currentSearchText = [self.searchDisplayController.searchBar.text copy];
++		NSString *searchPredicateFormat = [NSString stringWithFormat:@"%@ contains[c] %@", self.searchKey, @"%@"];
++		NSPredicate *searchPredicate = [NSPredicate predicateWithFormat:searchPredicateFormat, self.searchDisplayController.searchBar.text];
++		[NSFetchedResultsController deleteCacheWithName:self.fetchedResultsController.cacheName];
++		self.fetchedResultsController.fetchRequest.predicate = [NSCompoundPredicate andPredicateWithSubpredicates:[NSArray arrayWithObjects:searchPredicate, normalPredicate , nil]];
++		[self performFetchForTableView:tableView];
++	}
++	return self.fetchedResultsController;
++}
++
++- (void)searchDisplayControllerWillEndSearch:(UISearchDisplayController *)controller
++{
++	// reset the fetch controller for the main (non-searching) table view
++	[self fetchedResultsControllerForTableView:self.tableView];
++}
++
++- (void)setFetchedResultsController:(NSFetchedResultsController *)controller
++{
++	fetchedResultsController.delegate = nil;
++	[fetchedResultsController release];
++	fetchedResultsController = [controller retain];
++	controller.delegate = self;
++	normalPredicate = [self.fetchedResultsController.fetchRequest.predicate retain];
++	if (!self.title) self.title = controller.fetchRequest.entity.name;
++	if (self.view.window) [self performFetchForTableView:self.tableView];
++}
++
++- (UITableViewCellAccessoryType)accessoryTypeForManagedObject:(NSManagedObject *)managedObject
++{
++	return UITableViewCellAccessoryDisclosureIndicator;
++}
++
++- (UIImage *)thumbnailImageForManagedObject:(NSManagedObject *)managedObject
++{
++	return nil;
++}
++
++- (void)configureCell:(UITableViewCell *)cell forManagedObject:(NSManagedObject *)managedObject
++{
++}
++
++- (UITableViewCell *)tableView:(UITableView *)tableView cellForManagedObject:(NSManagedObject *)managedObject
++{
++    static NSString *ReuseIdentifier = @"CoreDataTableViewCell";
++    
++    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ReuseIdentifier];
++    if (cell == nil) {
++		UITableViewCellStyle cellStyle = self.subtitleKey ? UITableViewCellStyleSubtitle : UITableViewCellStyleDefault;
++        cell = [[[UITableViewCell alloc] initWithStyle:cellStyle reuseIdentifier:ReuseIdentifier] autorelease];
++    }
++	
++	if (self.titleKey) cell.textLabel.text = [managedObject valueForKey:self.titleKey];
++	if (self.subtitleKey) cell.detailTextLabel.text = [managedObject valueForKey:self.subtitleKey];
++	cell.accessoryType = [self accessoryTypeForManagedObject:managedObject];
++	UIImage *thumbnail = [self thumbnailImageForManagedObject:managedObject];
++	if (thumbnail) cell.imageView.image = thumbnail;
++	
++	return cell;
++}
++
++- (void)managedObjectSelected:(NSManagedObject *)managedObject
++{
++    // Navigation logic may go here. Create and push another view controller.
++    // AnotherViewController *anotherViewController = [[AnotherViewController alloc] initWithNibName:@"AnotherView" bundle:nil];
++    // [self.navigationController pushViewController:anotherViewController];
++    // [anotherViewController release];
++}
++
++- (void)deleteManagedObject:(NSManagedObject *)managedObject
++{
++}
++
++- (BOOL)canDeleteManagedObject:(NSManagedObject *)managedObject
++{
++	return NO;
++}
++
++- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
++{
++	NSManagedObject *managedObject = [[self fetchedResultsControllerForTableView:tableView] objectAtIndexPath:indexPath];
++	return [self canDeleteManagedObject:managedObject];
++}
++
++- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
++{
++	NSManagedObject *managedObject = [[self fetchedResultsControllerForTableView:tableView] objectAtIndexPath:indexPath];
++	[self deleteManagedObject:managedObject];
++}
++
++#pragma mark UIViewController methods
++
++- (void)viewDidLoad
++{
++	[self createSearchBar];
++}
++
++- (void)viewWillAppear:(BOOL)animated
++{
++	[super viewWillAppear:animated];
++	[self performFetchForTableView:self.tableView];
++}
++
++#pragma mark UITableViewDataSource methods
++
++- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
++{
++    return [[[self fetchedResultsControllerForTableView:tableView] sections] count];
++}
++
++- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView
++{
++	return [[self fetchedResultsControllerForTableView:tableView] sectionIndexTitles];
++}
++
++#pragma mark UITableViewDelegate methods
++
++- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
++{
++    return [[[[self fetchedResultsControllerForTableView:tableView] sections] objectAtIndex:section] numberOfObjects];
++}
++
++- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
++{    
++	return [self tableView:tableView cellForManagedObject:[[self fetchedResultsControllerForTableView:tableView] objectAtIndexPath:indexPath]];
++}
++
++- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
++{
++	[self managedObjectSelected:[[self fetchedResultsControllerForTableView:tableView] objectAtIndexPath:indexPath]];
++}
++
++- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
++{
++	return [[[[self fetchedResultsControllerForTableView:tableView] sections] objectAtIndex:section] name];
++}
++
++- (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index
++{
++	return [[self fetchedResultsControllerForTableView:tableView] sectionForSectionIndexTitle:title atIndex:index];
++}
++
++#pragma mark NSFetchedResultsControllerDelegate methods
++
++- (void)controllerWillChangeContent:(NSFetchedResultsController *)controller
++{
++    [self.tableView beginUpdates];
++}
++
++- (void)controller:(NSFetchedResultsController *)controller
++  didChangeSection:(id <NSFetchedResultsSectionInfo>)sectionInfo
++		   atIndex:(NSUInteger)sectionIndex
++	 forChangeType:(NSFetchedResultsChangeType)type
++{	
++    switch(type)
++	{
++        case NSFetchedResultsChangeInsert:
++            [self.tableView insertSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
++            break;
++			
++        case NSFetchedResultsChangeDelete:
++            [self.tableView deleteSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
++            break;
++    }
++}
++
++
++- (void)controller:(NSFetchedResultsController *)controller
++   didChangeObject:(id)anObject
++	   atIndexPath:(NSIndexPath *)indexPath
++	 forChangeType:(NSFetchedResultsChangeType)type
++	  newIndexPath:(NSIndexPath *)newIndexPath
++{	
++    UITableView *tableView = self.tableView;
++	
++    switch(type)
++	{
++        case NSFetchedResultsChangeInsert:
++            [tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
++            break;
++			
++        case NSFetchedResultsChangeDelete:
++            [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
++            break;
++			
++        case NSFetchedResultsChangeUpdate:
++			[tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
++            break;
++			
++        case NSFetchedResultsChangeMove:
++            [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
++            [tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
++            break;
++    }
++}
++
++
++- (void)controllerDidChangeContent:(NSFetchedResultsController *)controller
++{
++    [self.tableView endUpdates];
++}
++
++#pragma mark dealloc
++
++- (void)dealloc
++{
++	fetchedResultsController.delegate = nil;
++	[fetchedResultsController release];
++	[searchKey release];
++	[titleKey release];
++	[currentSearchText release];
++	[normalPredicate release];
++    [super dealloc];
++}
++
++@end
++
+diff --git a/nuCubeTimer/en.lproj/MainStoryboard_iPad.storyboard b/nuCubeTimer/en.lproj/MainStoryboard_iPad.storyboard
+index e9b96ed..0602e00 100644
+--- a/nuCubeTimer/en.lproj/MainStoryboard_iPad.storyboard
++++ b/nuCubeTimer/en.lproj/MainStoryboard_iPad.storyboard
+@@ -21,6 +21,12 @@
+                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                 <nil key="highlightedColor"/>
+                             </label>
++                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="gkl-zc-bLH">
++                                <rect key="frame" x="20" y="20" width="97" height="31"/>
++                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
++                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
++                                <textInputTraits key="textInputTraits"/>
++                            </textField>
+                         </subviews>
+                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                     </view>
+@@ -32,14 +38,6 @@
+             <point key="canvasLocation" x="-54" y="-263"/>
+         </scene>
+     </scenes>
+-    <classes>
+-        <class className="nuCubeTimerViewController" superclassName="UIViewController">
+-            <source key="sourceIdentifier" type="project" relativePath="./Classes/nuCubeTimerViewController.h"/>
+-            <relationships>
+-                <relationship kind="outlet" name="timeLabel" candidateClass="UILabel"/>
+-            </relationships>
+-        </class>
+-    </classes>
+     <simulatedMetricsContainer key="defaultSimulatedMetrics">
+         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
+         <simulatedOrientationMetrics key="orientation"/>
+diff --git a/nuCubeTimer/en.lproj/MainStoryboard_iPhone.storyboard b/nuCubeTimer/en.lproj/MainStoryboard_iPhone.storyboard
+index 46bc403..5a6e835 100644
+--- a/nuCubeTimer/en.lproj/MainStoryboard_iPhone.storyboard
++++ b/nuCubeTimer/en.lproj/MainStoryboard_iPhone.storyboard
+@@ -1,5 +1,5 @@
+ <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2177" systemVersion="11D50b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="2">
++<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2177" systemVersion="11E53" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="lNF-Zf-s0Y">
+     <dependencies>
+         <development defaultVersion="4200" identifier="xcode"/>
+         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1173"/>
+@@ -11,7 +11,7 @@
+                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+                 <viewController id="2" customClass="nuCubeTimerViewController" sceneMemberID="viewController">
+                     <view key="view" contentMode="scaleToFill" id="3">
+-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
++                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                         <subviews>
+                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="m9m-Fa-oXi">
+@@ -21,24 +21,91 @@
+                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                 <nil key="highlightedColor"/>
+                             </label>
++                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="o2C-ZJ-Hc2">
++                                <rect key="frame" x="112" y="130" width="97" height="31"/>
++                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
++                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
++                                <textInputTraits key="textInputTraits"/>
++                                <connections>
++                                    <action selector="onCuberNameChanged:" destination="2" eventType="editingChanged" id="TSf-PH-JR9"/>
++                                </connections>
++                            </textField>
++                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="8YY-1Q-eLh">
++                                <rect key="frame" x="20" y="169" width="280" height="227"/>
++                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
++                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
++                                <prototypes>
++                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Record Cell" textLabel="4c3-mc-a25" style="IBUITableViewCellStyleDefault" id="pX4-jU-aL8">
++                                        <rect key="frame" x="0.0" y="22" width="280" height="44"/>
++                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
++                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
++                                            <rect key="frame" x="0.0" y="0.0" width="260" height="43"/>
++                                            <autoresizingMask key="autoresizingMask"/>
++                                            <subviews>
++                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" id="4c3-mc-a25">
++                                                    <rect key="frame" x="10" y="0.0" width="240" height="43"/>
++                                                    <autoresizingMask key="autoresizingMask"/>
++                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
++                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
++                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
++                                                </label>
++                                            </subviews>
++                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
++                                        </view>
++                                        <connections>
++                                            <segue destination="aQh-Yb-y5n" kind="push" identifier="Show Video For Record" id="soj-Rv-F4s"/>
++                                        </connections>
++                                    </tableViewCell>
++                                </prototypes>
++                            </tableView>
+                         </subviews>
+                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                     </view>
++                    <navigationItem key="navigationItem" id="Are-kL-luc"/>
+                     <connections>
++                        <outlet property="cuberNameField" destination="o2C-ZJ-Hc2" id="Vzs-Ft-Dyo"/>
++                        <outlet property="tableView" destination="8YY-1Q-eLh" id="SWy-xw-XaJ"/>
+                         <outlet property="timeLabel" destination="m9m-Fa-oXi" id="wMT-iv-kL1"/>
++                        <outlet property="view" destination="3" id="Lfb-gL-hCd"/>
+                     </connections>
+                 </viewController>
+             </objects>
++            <point key="canvasLocation" x="387" y="9"/>
++        </scene>
++        <!--View Controller-->
++        <scene sceneID="r5k-oT-csw">
++            <objects>
++                <placeholder placeholderIdentifier="IBFirstResponder" id="kbT-K8-MK9" userLabel="First Responder" sceneMemberID="firstResponder"/>
++                <viewController id="aQh-Yb-y5n" sceneMemberID="viewController">
++                    <view key="view" contentMode="scaleToFill" id="YDF-0l-ZAs">
++                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
++                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
++                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
++                    </view>
++                    <navigationItem key="navigationItem" id="dCy-cQ-EmA"/>
++                </viewController>
++            </objects>
++            <point key="canvasLocation" x="874" y="1"/>
++        </scene>
++        <!--Navigation Controller-->
++        <scene sceneID="y0a-gp-xA9">
++            <objects>
++                <placeholder placeholderIdentifier="IBFirstResponder" id="3Qb-dn-uIf" userLabel="First Responder" sceneMemberID="firstResponder"/>
++                <navigationController id="lNF-Zf-s0Y" sceneMemberID="viewController">
++                    <toolbarItems/>
++                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="o73-eS-ZvM">
++                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
++                        <autoresizingMask key="autoresizingMask"/>
++                    </navigationBar>
++                    <nil name="viewControllers"/>
++                    <connections>
++                        <segue destination="2" kind="relationship" relationship="rootViewController" id="Ukx-qo-iqf"/>
++                    </connections>
++                </navigationController>
++            </objects>
++            <point key="canvasLocation" x="-40" y="1"/>
+         </scene>
+     </scenes>
+-    <classes>
+-        <class className="nuCubeTimerViewController" superclassName="UIViewController">
+-            <source key="sourceIdentifier" type="project" relativePath="./Classes/nuCubeTimerViewController.h"/>
+-            <relationships>
+-                <relationship kind="outlet" name="timeLabel" candidateClass="UIButton"/>
+-            </relationships>
+-        </class>
+-    </classes>
+     <simulatedMetricsContainer key="defaultSimulatedMetrics">
+         <simulatedStatusBarMetrics key="statusBar"/>
+         <simulatedOrientationMetrics key="orientation"/>
+diff --git a/nuCubeTimer/nuCubeTimerViewController.h b/nuCubeTimer/nuCubeTimerViewController.h
+index ceb5c63..3822c0c 100644
+--- a/nuCubeTimer/nuCubeTimerViewController.h
++++ b/nuCubeTimer/nuCubeTimerViewController.h
+@@ -7,6 +7,7 @@
+ //
+ 
+ #import <UIKit/UIKit.h>
+-
++#import "CoreDataTableViewController.h"
+ @interface nuCubeTimerViewController : UIViewController
++@property (nonatomic, strong) UIManagedDocument *recordDataBase;
+ @end
+diff --git a/nuCubeTimer/nuCubeTimerViewController.m b/nuCubeTimer/nuCubeTimerViewController.m
+index 81f0807..316d348 100644
+--- a/nuCubeTimer/nuCubeTimerViewController.m
++++ b/nuCubeTimer/nuCubeTimerViewController.m
+@@ -10,13 +10,14 @@
+ 
+ @interface nuCubeTimerViewController ()
+ @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
+-
+ @property NSTimer *timer;
++@property BOOL stoppingTimer;
++@property int timeValue;
++@property (weak, nonatomic) IBOutlet UITableView *tableView;
++@property (weak, nonatomic) IBOutlet UITextField *cuberNameField;
+ 
+ - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event;
+ - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event;
+-@property BOOL stoppingTimer;
+-@property int timeValue;
+ @end
+ 
+ @implementation nuCubeTimerViewController
+@@ -25,6 +26,37 @@
+ @synthesize timer = _timer;
+ @synthesize stoppingTimer = _stoppingTimer;
+ @synthesize timeValue = _timeValue;
++@synthesize tableView = _tableView;
++@synthesize cuberNameField = _cuberNameField;
++@synthesize recordDataBase = _recordDataBase;
++
++- (void) setupFetchedResultsController
++{
++    
++}
++
++- (void) useDocument
++{
++    if (![[NSFileManager defaultManager] fileExistsAtPath:[self.recordDataBase.fileURL path]]) {
++        [self.recordDataBase saveToURL:self.recordDataBase.fileURL forSaveOperation:UIDocumentSaveForCreating completionHandler:^(BOOL success) {
++            [self setupFetchedResultsController];
++        }];
++    } else if (self.recordDataBase.documentState == UIDocumentStateClosed) {
++        [self.recordDataBase openWithCompletionHandler:^(BOOL success) {
++            [self setupFetchedResultsController];
++        }];
++    } else if (self.recordDataBase.documentState == UIDocumentStateNormal) {
++        [self setupFetchedResultsController];
++    }
++}
++
++- (void) setRecordDataBase:(UIManagedDocument *)recordDataBase
++{
++    if (_recordDataBase != recordDataBase) {
++        _recordDataBase = recordDataBase;
++        [self useDocument];
++    }
++}
+ 
+ - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+ {
+@@ -55,7 +87,16 @@
+                                           repeats:YES];
+     }
+ }
+-
++- (IBAction)onCuberNameChanged:(id)sender {
++    NSLog(@"onCuberNameChanged");
++    
++    if (!self.recordDataBase) {
++        NSURL *url = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
++        url = [url URLByAppendingPathComponent:@"Default Record Database"];
++        self.recordDataBase = [[UIManagedDocument alloc] initWithFileURL:url];
++    }
++    
++}
+ 
+ - (void)viewDidLoad
+ {
+@@ -77,6 +118,8 @@
+ - (void)viewDidUnload
+ {
+     [self setTimeLabel:nil];
++    [self setTableView:nil];
++    [self setCuberNameField:nil];
+     [super viewDidUnload];
+     // Release any retained subviews of the main view.
+ }
+diff --git a/xxx.txt b/xxx.txt
+new file mode 100644
+index 0000000..46b4969
+--- /dev/null
++++ b/xxx.txt
+@@ -0,0 +1,3 @@
++diff --git a/nuCubeTimer.xcodeproj/project.xcworkspace/xcuserdata/mint924.xcuserdatad/UserInterfaceState.xcuserstate b/nuCubeTimer.xcodeproj/project.xcworkspace/xcuserdata/mint924.xcuserdatad/UserInterfaceState.xcuserstate
++index 9f0af0f..61b5078 100644
++Binary files a/nuCubeTimer.xcodeproj/project.xcworkspace/xcuserdata/mint924.xcuserdatad/UserInterfaceState.xcuserstate and b/nuCubeTimer.xcodeproj/project.xcworkspace/xcuserdata/mint924.xcuserdatad/UserInterfaceState.xcuserstate differ

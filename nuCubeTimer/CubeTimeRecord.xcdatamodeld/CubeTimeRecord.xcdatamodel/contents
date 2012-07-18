@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1171" systemVersion="11E53" minimumToolsVersion="Xcode 4.1" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Cuber" representedClassName="Cuber" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="records" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CubeTimeRecord" inverseName="whoCreate" inverseEntity="CubeTimeRecord" syncable="YES"/>
+    </entity>
+    <entity name="CubeTimeRecord" representedClassName="CubeTimeRecord" syncable="YES">
+        <attribute name="time" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="whoCreate" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Cuber" inverseName="records" inverseEntity="Cuber" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Cuber" positionX="-326" positionY="162" width="128" height="75"/>
+        <element name="CubeTimeRecord" positionX="-101" positionY="192" width="128" height="75"/>
+    </elements>
+</model>
