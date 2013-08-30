@@ -19,6 +19,8 @@
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
 
+Are you serious?
+
 @interface CoreDataTableViewController : UITableViewController <NSFetchedResultsControllerDelegate>
 
 // The controller (this class fetches nothing if this is not set).
