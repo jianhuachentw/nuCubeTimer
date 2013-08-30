@@ -1,3 +1,5 @@
+What the hell is this?
+
 diff --git a/CubeTime.xcdatamodeld/.xccurrentversion b/CubeTime.xcdatamodeld/.xccurrentversion
 deleted file mode 100644
 index 99096a7..0000000
